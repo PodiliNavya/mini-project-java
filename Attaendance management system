@@ -1,0 +1,94 @@
+Attaendance management system
+import java.util.*;
+public class Project3
+{
+    public static void main(String args[])
+    {
+    Scanner a=new Scanner(System.in);
+    Admin stu=new Admin();
+    stu.faculty();
+    stu.dept();
+    stu.display();
+    }
+}
+class Admin
+{
+    private String dept;
+    private long id;
+    private String name;
+    private int phno;
+    Scanner sc=new Scanner(System.in);
+    int ch;
+void faculty()
+    {
+        System.out.println("*************😍😍*WELCOME TO THE ATTENDENCE MARKER*😍😍*************");
+        System.out.println("-----------️Enter faculty details to LOGIN------------");
+        System.out.println("Enter your name");
+        name=sc.next();
+        System.out.println("Enter your id");
+        id=sc.nextInt();
+        System.out.println("Enter your phno");
+        phno=sc.nextInt();
+    }
+
+void dept()
+{
+    System.out.println("YOU ARE:       "+name);
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("YOUR ID:        "+id);
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("UR PhN0        "+phno);
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("U HAVE LOGGED IN");
+}
+void display()
+    {
+        
+        System.out.println("======================🧾MAKE STUDENT ATTENDENCE🧾======================");
+        System.out.println("######WELCOME###### "+name);
+        do
+        {
+        System.out.println("enter your choice");
+         System.out.println("1.CSE \n2.ECE\n3.EEE\n4.Exit ");
+         int ch=sc.nextInt();
+         switch(ch)
+         {
+             case 1:
+                 System.out.println("Enter the no of students:");
+                 int n=sc.nextInt();
+                 System.out.println("Enter the roll number of the student");
+                 int id1=sc.nextInt();
+                 System.out.println("Enter the name of the student");
+                 String s=sc.next();
+                 System.out.println("Enter todays attendence");
+                 String pre=sc.next();
+                 break;
+             case 2:
+                 System.out.println("Enter the no of students:");
+                 int n1=sc.nextInt();
+                 System.out.println("Enter the roll number of the student");
+                 int id2=sc.nextInt();
+                 System.out.println("Enter the name of the student");
+                 String s1=sc.next();
+                 System.out.println("Enter todays attendence");
+                 String pre1=sc.next();
+                 break;
+            case 3:
+                 System.out.println("Enter the no of students:");
+                 int n2=sc.nextInt();
+                 System.out.println("Enter the roll number of the student");
+                 int id3=sc.nextInt();
+                 System.out.println("Enter the name of the student");
+                 String s2=sc.next();
+                 System.out.println("Enter todays attendence");
+                 String pre2=sc.next();
+                 break;
+           case 4:
+                 System.out.println("UR ATTENDENCE HAS MARKED");
+                 System.out.println("THANK YOU");
+                 break;
+            }
+        }while(ch!=4); 
+    }
+}
+
